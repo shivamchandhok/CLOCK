@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/c1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCA720"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="193dp"
+        android:text="WORLD CLOCKS"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/isyd"
+        android:layout_width="222dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/sydney" />
+
+    <ImageView
+        android:id="@+id/inyc"
+        android:layout_width="226dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="169dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/isyd"
+        app:srcCompat="@drawable/newyork" />
+
+    <ImageView
+        android:id="@+id/ising"
+        android:layout_width="229dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inyc"
+        app:srcCompat="@drawable/singapore" />
+
+    <TextView
+        android:id="@+id/tsyd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="83dp"
+        android:text="SYDNEY"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/isyd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tnyc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="173dp"
+        android:layout_marginEnd="75dp"
+        android:text="NEW YORK"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inyc"
+        app:layout_constraintTop_toBottomOf="@+id/tsyd" />
+
+    <TextView
+        android:id="@+id/tsing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="82dp"
+        android:text="SINGAPORE"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ising"
+        app:layout_constraintTop_toBottomOf="@+id/tnyc" />
+
+    <TextClock
+        android:id="@+id/textclock1"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="30dp"
+        android:format12Hour="hh:mm:ss a"
+        android:textColor="#000000"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/isyd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextClock
+        android:id="@+id/textclock2"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="72dp"
+        android:format12Hour="hh:mm:ss a"
+        android:textColor="#000000"
+        android:timeZone="America/New_York"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toEndOf="@+id/inyc"
+        app:layout_constraintTop_toBottomOf="@+id/tnyc" />
+
+    <TextClock
+        android:id="@+id/textclock3"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="72dp"
+        android:format12Hour="hh:mm:ss a"
+        android:textColor="#000000"
+        android:timeZone="Asia/Singapore"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ising"
+        app:layout_constraintTop_toBottomOf="@+id/tsing" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/c2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCA720">
+
+
+    <ImageView
+        android:id="@+id/iams"
+        android:layout_width="225dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="170dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/amsterdam" />
+
+    <ImageView
+        android:id="@+id/idub"
+        android:layout_width="207dp"
+        android:layout_height="185dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="165dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iams"
+        app:srcCompat="@drawable/dubai" />
+
+    <TextView
+        android:id="@+id/tams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="48dp"
+        android:text="AMSTERDAM"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iams"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tdub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="94dp"
+        android:text="DUBAI"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/idub"
+        app:layout_constraintTop_toBottomOf="@+id/tams" />
+
+    <TextClock
+        android:id="@+id/textclock4"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="42dp"
+        android:visibility="visible"
+        android:format12Hour="hh:mm:ss a"
+        android:textColor="#000000"
+        android:timeZone="Europe/Amsterdam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iams"
+        app:layout_constraintTop_toBottomOf="@+id/tams" />
+
+    <TextClock
+        android:id="@+id/textclock5"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="43dp"
+        android:visibility="visible"
+        android:format12Hour="hh:mm:ss a"
+        android:textColor="#000000"
+        android:timeZone="Asia/Dubai"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/idub"
+        app:layout_constraintTop_toBottomOf="@+id/tdub" />
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="87dp"
+        android:background="#F5C55B"
+        android:text="12hour"
+        app:layout_constraintEnd_toStartOf="@+id/bt2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idub" />
+
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="70dp"
+        android:background="#F5C55B"
+        android:text="24HOUR"
+        android:onClick="changeFormat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt1"
+        app:layout_constraintTop_toBottomOf="@+id/textclock5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
